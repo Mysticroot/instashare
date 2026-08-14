@@ -5,7 +5,7 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 
-const VERIFY_TOKEN = process.env.VERIFY_TOKEN;
+const VERIFY_TOKEN = process.env.VERIFY_TOKEN || "my_verify_token";
 
 app.get("/", (req, res) => {
   res.send("Instagram Reel POC is running");
